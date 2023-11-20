@@ -151,34 +151,34 @@ export default function App(){
 
   // console.log("city = ",city);
 
-  // if(city === null){
-  // axios.get("https://api.openweathermap.org/geo/1.0/reverse?lat="+lat+"&lon="+lon+"&limit=1&appid=3c79fbd12d1e34cd76c9cf73cd27a8d7")
-  // .then((data) => {
-  //   // console.log("inside 1st axios");
-  //   setcity(data["data"][0]["name"]);
-  // })
-  // .catch((err)=>{
-  //   console.log("inside axios error 1");
+  if(city === null){
+  axios.get("https://api.openweathermap.org/geo/1.0/reverse?lat="+lat+"&lon="+lon+"&limit=1&appid={APP_ID}")
+  .then((data) => {
+    // console.log("inside 1st axios");
+    setcity(data["data"][0]["name"]);
+  })
+  .catch((err)=>{
+    console.log("inside axios error 1");
 
-  //   // console.log(err.code);
-  //   if(err.code === 'ERR_NETWORK'){
-  //   // console.log("inside axios error 1 1");
-  //   //   // seterror1("no internet");
-  //     setConnectionStatus(false);
-  //   //   ToastAndroid.showWithGravity('No Internet, Please Check Your Internet Connection',ToastAndroid.LONG, ToastAndroid.BOTTOM);
-  //   }
-  //   else if(err.code === 'ERR_BAD_REQUEST'){
-  //   console.log("inside axios error 1 2");
+    // console.log(err.code);
+    if(err.code === 'ERR_NETWORK'){
+    // console.log("inside axios error 1 1");
+    //   // seterror1("no internet");
+      setConnectionStatus(false);
+    //   ToastAndroid.showWithGravity('No Internet, Please Check Your Internet Connection',ToastAndroid.LONG, ToastAndroid.BOTTOM);
+    }
+    else if(err.code === 'ERR_BAD_REQUEST'){
+    console.log("inside axios error 1 2");
 
-  //   // ToastAndroid.showWithGravity('Please wait, fetching the latest weather data',ToastAndroid.LONG, ToastAndroid.BOTTOM); 
-  //   // setbadrequest2(false);
-  //   }else{
-  //   console.log("inside axios error 1 3");
+    // ToastAndroid.showWithGravity('Please wait, fetching the latest weather data',ToastAndroid.LONG, ToastAndroid.BOTTOM); 
+    // setbadrequest2(false);
+    }else{
+    console.log("inside axios error 1 3");
 
-  //     ToastAndroid.showWithGravity('Heavy Traffic, Try again Later',ToastAndroid.LONG, ToastAndroid.BOTTOM);
-  //   }
-  // })
-  // }
+      ToastAndroid.showWithGravity('Heavy Traffic, Try again Later',ToastAndroid.LONG, ToastAndroid.BOTTOM);
+    }
+  })
+  }
 
 
   // if(mainbool === true){
@@ -190,7 +190,7 @@ export default function App(){
 
   if(temp === null && datadesc1 === null && datadesc2 === null && datadesc3 === null && datadesc4 === null && datadesc5 === null &&dataicon1 === null && dataicon2 === null && dataicon3 === null && dataicon4 === null && dataicon5 === null && datatemp1 === null && datatemp2 === null && datatemp3 === null && datatemp4 === null && datatemp5 === null && windspeed === null && icon==="" && desc==="" && mintemp === null && maxtemp === null && pressure === null && humidity === null && feelslike === null && datadate1 === null && datadate2 === null && datadate3 === null && datadate4 === null && datadate5 === null){
     // console.log("before second axios get method");
-  axios.get("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=3c79fbd12d1e34cd76c9cf73cd27a8d7")
+  axios.get("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid={APP_ID}")
   .then((data) => {
       console.log("inside axios 2");
     // console.log("inside second axios");
@@ -342,7 +342,7 @@ export default function App(){
 
   function modalrender(value){
 
-    axios.get("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=3c79fbd12d1e34cd76c9cf73cd27a8d7")
+    axios.get("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid={APP_ID}")
     .then((data) => {
       // console.log("inside modal render");
       setmodalbool(true);
