@@ -1,6 +1,6 @@
 # Weather-App-using-React-Native
 
-This is a weather app created using Kotlin.
+This is a weather app created using React-Native.
 
 It takes the current location of the user and using axios it sends request to openweathermap API to find the location name by using the coordinates of the user.
 
