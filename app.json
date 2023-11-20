@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "weather app",
+    "slug": "myapp1",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/w1.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/w1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ADD8E6"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/w1.png",
+        "backgroundColor": "#ADD8E6"
+      },
+      "package": "com.pranaw2004.myapp1"
+    },
+    "web": {
+      "favicon": "./assets/w1.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "04850542-894c-45cc-bc04-4f065f9ecd48"
+      }
+    }
+  }
+}
